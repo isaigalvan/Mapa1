@@ -98,6 +98,7 @@ public class Dado : MonoBehaviour
                 esTurno = false;
                 seDetuvo = false;
                 personaje.GetComponent<Animator>().SetBool("isWalking", true);
+                valorMax = 6;
             }
         }
         

@@ -1846,7 +1846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206984273}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.919, y: 3.566, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9357,6 +9357,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4daa7d2caa2d1de48874f686d49eb698, type: 3}
   - {fileID: 21300000, guid: b01017c649672f04681a497af51c621a, type: 3}
   - {fileID: 21300000, guid: b44e902ce6cc7a94887da7b405f6db33, type: 3}
+  IconoPrefab: {fileID: 0}
+  IconoParent: {fileID: 0}
 --- !u!4 &940622040
 Transform:
   m_ObjectHideFlags: 0
@@ -9420,11 +9422,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posx: 0
   posy: 0
+  posx2: 0
+  posy2: 0
   idPersonaje: 0
+  total: 0
   personajePrefab: {fileID: 8374747939170389795, guid: 6449d7a80efbb034f95c24b6c1f60bb9,
     type: 3}
   per: {fileID: 0}
   personajeParent: {fileID: 206984274}
+  sprites:
+  - {fileID: 21300000, guid: 384105ae4489e7444b047c91cba23358, type: 3}
+  - {fileID: 21300000, guid: 9068a30570fe54b4c8154079fdc354b9, type: 3}
+  - {fileID: 21300000, guid: 63d787ef85a80624e98c090bcd63b7a1, type: 3}
+  - {fileID: 21300000, guid: f15293397d290f74e85d1e0b76a98078, type: 3}
+  - {fileID: 21300000, guid: 2a89f185a467ce24b83f148139bd02d2, type: 3}
+  - {fileID: 21300000, guid: 8653377594de7fc43b4be4b6625ce2d3, type: 3}
+  - {fileID: 21300000, guid: cdd10100e39fc1f4089aba5c16096df0, type: 3}
+  - {fileID: 21300000, guid: 1dceaeed7fa04a7428e0862d02b01554, type: 3}
+  - {fileID: 21300000, guid: ae0aec340aa0e0643a24526b7a61a68b, type: 3}
+  - {fileID: 21300000, guid: 852d3fa7b9e96894abf209f70ea1c97b, type: 3}
+  - {fileID: 21300000, guid: e1fad94bc4a2f2c498badc715372629d, type: 3}
+  - {fileID: 21300000, guid: 7823b8c0d84e03a45b80263333ef3387, type: 3}
+  - {fileID: 21300000, guid: dc89d02c0c6ba6b42bf64eaf67c18be6, type: 3}
+  - {fileID: 21300000, guid: 3a6a34691c73413458b571833a2d7215, type: 3}
+  - {fileID: 21300000, guid: 77092513d4383d54888740474e90402b, type: 3}
+  IconoPrefab: {fileID: 6574562326959331295, guid: 9138ecdd3bb7fe44bb411caabf0cad2c,
+    type: 3}
+  IconoParent: {fileID: 1085577628}
+  iconos: []
 --- !u!114 &940622043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9437,10 +9462,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c31255a67ac9304ca46876f719d9416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dado: {fileID: 261604918}
+  scripts: {fileID: 0}
   per: {fileID: 0}
   tiempo: 0
   actTiempo: 0
+  esHab1: 0
+  esHab2: 0
+  esHab3: 0
+  condi: 0
 --- !u!1 &962847507
 GameObject:
   m_ObjectHideFlags: 0
@@ -14203,7 +14232,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1460041676}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 940622043}
+        m_MethodName: habilidad3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1460041676
@@ -14637,7 +14677,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1468937673}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 940622043}
+        m_MethodName: habilidad2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1468937673
@@ -19559,7 +19610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077704575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 359.1901, y: -3.1755352, z: -0.11989453}
+  m_LocalPosition: {x: 0, y: 0, z: -0.11989453}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

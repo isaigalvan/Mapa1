@@ -5,15 +5,21 @@ using UnityEngine;
 
 public class CrearPersonaje : MonoBehaviour
 {
-    public float posx, posy;
-    public int idPersonaje;
+    public float posx, posy, posx2, posy2;
+    public int idPersonaje,total;
     public GameObject personajePrefab, per;
     public Transform personajeParent;
-   
+    public Sprite[] sprites;
+    public GameObject IconoPrefab;
+    public Transform IconoParent;
+    public List<GameObject> iconos = new List<GameObject>();
+    
+
     // Start is called before the first frame update
     void Start()
     {
         Crear();
+        crearIconos();
     }
 
    
@@ -33,6 +39,60 @@ public class CrearPersonaje : MonoBehaviour
         per.GetComponent<Personaje>().AsignarTamanos();
         AsignarTexturas();  
     }
+    public void crearIconos()
+    {
+        total = 3;
+        posx2 = 8.73f;
+        posy2 = 1.3f;
+        for (int i = 0; i < total; i++)
+        {
+
+            GameObject iconoTemp = Instantiate(IconoPrefab, new Vector3(posx2, posy2, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
+            iconos.Add(iconoTemp);
+            iconoTemp.transform.parent = IconoParent;
+            posx2 = posx2 + 2;
+        }
+        iconosPersonajes();
+    }
+    public void iconosPersonajes()
+    {
+        switch (idPersonaje)
+        {
+            case 0:
+                iconos[0].GetComponent<Icono>().AsignarTextura(sprites[0]);
+                iconos[1].GetComponent<Icono>().AsignarTextura(sprites[1]);
+                iconos[2].GetComponent<Icono>().AsignarTextura(sprites[2]);
+                break;
+            case 1:
+                iconos[0].GetComponent<Icono>().AsignarTextura(sprites[3]);
+                iconos[1].GetComponent<Icono>().AsignarTextura(sprites[4]);
+                iconos[2].GetComponent<Icono>().AsignarTextura(sprites[5]);
+                break;
+            case 2:
+                iconos[0].GetComponent<Icono>().AsignarTextura(sprites[6]);
+                iconos[1].GetComponent<Icono>().AsignarTextura(sprites[7]);
+                iconos[2].GetComponent<Icono>().AsignarTextura(sprites[8]);
+                break;
+            case 3:
+                iconos[0].GetComponent<Icono>().AsignarTextura(sprites[9]);
+                iconos[1].GetComponent<Icono>().AsignarTextura(sprites[10]);
+                iconos[2].GetComponent<Icono>().AsignarTextura(sprites[11]);
+                break;
+            case 4:
+                iconos[0].GetComponent<Icono>().AsignarTextura(sprites[12]);
+                iconos[1].GetComponent<Icono>().AsignarTextura(sprites[13]);
+                iconos[2].GetComponent<Icono>().AsignarTextura(sprites[14]);
+                break;
+            case 5:
+                iconos[0].GetComponent<Icono>().AsignarTextura(sprites[3]);
+                iconos[1].GetComponent<Icono>().AsignarTextura(sprites[4]);
+                iconos[2].GetComponent<Icono>().AsignarTextura(sprites[5]);
+                break;
+            default:
+                break;
+        }
+    }
+    
     void AsignarCoord()
     {
         switch (idPersonaje)

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 468575434753620268}
   - component: {fileID: 6523115929363339349}
   - component: {fileID: 5936436314714885123}
+  - component: {fileID: 4421317868708884730}
   m_Layer: 0
   m_Name: Personaje
   m_TagString: PerPref
@@ -176,3 +177,24 @@ MonoBehaviour:
   param3: 
   param4: 
   param5: 
+--- !u!50 &4421317868708884730
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8374747939170389795}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

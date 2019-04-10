@@ -9,7 +9,8 @@ public class CrearCasilla : MonoBehaviour
     public Transform CasillasParent;
     public List<GameObject> casillas = new List<GameObject>();
     public Sprite[] sprites;
-
+    public GameObject IconoPrefab;
+    public Transform IconoParent;
 
     /// <summary>
     /// Crear
